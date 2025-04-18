@@ -38,8 +38,8 @@ resource "aws_security_group" "blog" {
 
 resource "aws_security_group_rule" "blog_http_in" {
   type        = "ingress"
-  from_port   = 22
-  to_port     = 22
+  from_port   = 0
+  to_port     = 0
   protocol    = "tcp"
   cidr_blocks = ["0.0.0.0/0"]
   security_group_id = aws_security_group.blog.id
@@ -48,10 +48,10 @@ resource "aws_security_group_rule" "blog_http_in" {
 
 resource "aws_security_group_rule" "blog_https_in" {
   type        = "ingress"
-  from_port   = 8080
-  to_port     = 8090
+  from_port   = 443
+  to_port     = 443
   protocol    = "tcp"
-  cidr_blocks = ["10.10.0.0/16"]
+  cidr_blocks = ["0.0.0.0/0"]
   security_group_id = aws_security_group.blog.id
 }
 
