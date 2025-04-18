@@ -6,7 +6,7 @@ terraform {
   }
 }
 
-provider "aws" {
+resource_provider "aws" {
   region  = "us-west-2"
 }
 
