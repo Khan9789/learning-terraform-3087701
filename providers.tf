@@ -6,6 +6,6 @@ terraform {
   }
 }
 
-provider "aws" {
+provider "aws" "ec2" {
   region  = "us-west-2"
 }
